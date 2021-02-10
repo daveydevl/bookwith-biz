@@ -1,0 +1,7 @@
+indexes:
+    
+- kind: events
+  ancestor: yes
+  properties:
+  - name: end
+    direction: asc

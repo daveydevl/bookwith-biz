@@ -1,0 +1,58 @@
+application: bookwith-biz
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: yes
+module: static
+
+default_expiration: "7d"
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  secure: always
+  
+- url: /robots\.txt
+  static_files: robots.txt
+  upload: robots\.txt
+  secure: always
+  
+- url: /privacy
+  static_files: privacy.html
+  upload: privacy\.html
+  secure: always
+  http_headers:
+    Content-Type: text/html; charset=utf-8
+    Vary: Accept-Encoding
+  
+- url: /tos
+  static_files: tos.html
+  upload: tos\.html
+  secure: always
+  http_headers:
+    Content-Type: text/html; charset=utf-8
+    Vary: Accept-Encoding
+    
+- url: /owner
+  static_files: owner.html
+  upload: owner\.html
+  secure: always
+  http_headers:
+    Content-Type: text/html; charset=utf-8
+    Vary: Accept-Encoding
+    
+- url: /splash\.css
+  static_files: splash.css
+  upload: splash\.css
+  secure: always
+  http_headers:
+    Vary: Accept-Encoding
+
+- url: /.*
+  static_files: splash.html
+  upload: splash\.html
+  secure: always
+  http_headers:
+    Content-Type: text/html; charset=utf-8
+    Vary: Accept-Encoding

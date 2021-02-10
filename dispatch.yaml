@@ -1,0 +1,7 @@
+dispatch:
+
+- url: "www.bookwith.biz/*"
+  service: static
+  
+- url: "bookwith.biz/*"
+  service: static
